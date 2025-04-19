@@ -10,6 +10,22 @@
 
 }
 
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: linear-gradient(90deg, lightblue, darkblue);
+    
+    header{
+        height: 75px;
+    }
+    main{
+        height: 100%;
+    }
+    footer{
+        height: 75px;
+    }
+}
+
 h1{
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
