@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Флора</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="services-header">
+        <h1>Наши услуги</h1>
+        <p>Профессиональные решения для ваших событий</p>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">Флора</div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О нас</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="services-container">
+        <div class="service-cards">
+            <!-- Карточка 1 -->
+            <div class="service-card">
+                <i class="fas fa-glass-cheers"></i>
+                <h3>Оформление мероприятий</h3>
+                <p>Полный цикл оформления свадеб, корпоративов и праздников</p>
+                <button class="btn" onclick="showOrderForm('Оформление мероприятий')">Заказать</button>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="service-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Цветочная подписка</h3>
+                <p>Свежие букеты еженедельно или ежемесячно</p>
+                <button class="btn" onclick="showOrderForm('Цветочная подписка')">Выбрать</button>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="service-card">
+                <i class="fas fa-palette"></i>
+                <h3>Индивидуальный дизайн</h3>
+                <p>Уникальные букеты по вашему эскизу</p>
+                <button class="btn" onclick="showOrderForm('Индивидуальный дизайн')">Создать</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Форма заказа -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <form id="order-form" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Телефон" required>
+                </div>
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2024 Флора. Все права защищены</p>
+            <p>Контакты: +7 (495) 123-45-67</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

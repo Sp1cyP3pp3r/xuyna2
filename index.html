@@ -1,91 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Электротехника</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Цветочная мастерская "Флора"</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Шапка -->
     <header>
-        <img src="" alt="logo">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">
-                        Главная
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Каталог
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        О нас
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Цветочная мастерская <span>Флора</span></h1>
+            <p class="tagline">Создаём красоту с 2010 года</p>
+            <a href="#catalog" class="btn">Смотреть каталог</a>
+        </div>
     </header>
-    <main>
-        <div class="bigshit">
-            <figure>
-                <h1>
-                    Элегантность в каждой детали
-                </h1>
-                <figcaption>
-                    Откройте для себя новый мир перфораторов.
-                </figcaption>
-            </figure>
-            <div>
-                <a href="">
-                    Каталог
-               </a>
-            </div>
-        </div>
-        <div class="shop">
-            <h1>
-                Новинки
-            </h1>
-            <div class="shop-grid">
-                <a href="">
-                    <img src="https://cleanshop.net/storage/products/March2021/5lpn6FRNAgYC0m3xfGaG.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="https://cdn1.ozone.ru/s3/multimedia-n/6810753731.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="https://cdn1.ozone.ru/s3/multimedia-j/6026728399.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="https://ryvok.ru/img/files/electroinstrument/perforatory/alteco-promo-sds-plus-rh-0215-big-1.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="shop">
-            <h1>
-                Категории
-            </h1>
-            <div class="shop-grid">
-                <a href="">
-                    <img src="https://cleanshop.net/storage/products/March2021/5lpn6FRNAgYC0m3xfGaG.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="https://cdn1.ozone.ru/s3/multimedia-n/6810753731.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="https://cdn1.ozone.ru/s3/multimedia-j/6026728399.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="https://ryvok.ru/img/files/electroinstrument/perforatory/alteco-promo-sds-plus-rh-0215-big-1.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    </main>
-    <footer>
 
+    <!-- Навигация -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><span>Флора</span> Цветы</div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О нас</a>
+                <a href="#cart" onclick="toggleCart()">Корзина (<span id="cart-count">0</span>)</a>
+                <a href="#login" onclick="toggleLogin()">Войти</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <!-- Каталог товаров -->
+        <section id="catalog">
+            <h2>Популярные букеты</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=2545ad18a13c67783ad854101684a53766d88fb4-12422461-images-thumbs&n=13" alt="Букет роз" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Розовая нежность</h3>
+                        <p class="product-price">3 990 ₽</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1495231916356-a86217efff12" alt="Свадебный букет" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Свадебное настроение</h3>
+                        <p class="product-price">5 490 ₽</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1560790671-b76ca4de55ef" alt="Экзотические цветы" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Экзотика</h3>
+                        <p class="product-price">6 790 ₽</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero">
+            <h2>Добро пожаловать в цветочную мастерскую "Флора"</h2>
+            <div class="hero-content">
+                <p>Создаём уникальные букеты с 2010 года</p>
+                <a href="catalog.html" class="btn">Перейти в каталог</a>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="advantage-card">
+                <i class="fas fa-shipping-fast advantage-icon"></i>
+                <h4>Быстрая доставка</h4>
+                <p>Доставка по городу за 2 часа</p>
+            </div>
+
+            <div class="advantage-card">
+                <i class="fas fa-award advantage-icon"></i>
+                <h4>Свежие цветы</h4>
+                <p>Гарантия свежести 7 дней</p>
+            </div>
+
+            <div class="advantage-card">
+                <i class="fas fa-lock advantage-icon"></i>
+                <h4>Безопасная оплата</h4>
+                <p>Онлайн оплата картой</p>
+            </div>
+        </section>
+
+        <!-- Форма подписки -->
+        <section class="newsletter">
+            <h2>Подпишитесь на наши новости</h2>
+            <p>Получайте эксклюзивные предложения и скидки</p>
+            <form>
+                <input type="email" placeholder="Ваш email">
+                <button type="submit" class="btn">Подписаться</button>
+            </form>
+        </section>
+
+        <!-- Модальное окно корзины -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleCart()">&times;</span>
+                <h2>Ваша корзина</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <h3>Итого: <span id="total-price">0</span> ₽</h3>
+                    <button class="btn" onclick="toggleCheckout()">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Окно оформления заказа -->
+        <div id="checkout-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleCheckout()">&times;</span>
+                <h2>Оформление заказа</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label>Имя:</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон:</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Адрес доставки:</label>
+                        <textarea required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Подтвердить заказ</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Модальное окно входа -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleLogin()">&times;</span>
+                <h2>Личный кабинет</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Пароль:</label>
+                        <input type="password" required>
+                    </div>
+                    <button type="submit" class="btn">Войти</button>
+                    <p>Нет аккаунта? <a href="#register">Зарегистрироваться</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>Москва, ул. Цветочная, 15</p>
+                <p>+7 (495) 123-45-67</p>
+                <p>info@flora.ru</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Часы работы</h4>
+                <p>Пн-Пт: 9:00 - 21:00</p>
+                <p>Сб-Вс: 10:00 - 20:00</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
